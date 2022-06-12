@@ -1,0 +1,31 @@
+<h1>Edit Dog</h1><br>
+{{#with foundDog}}
+<form action='/dogs/edit/{{dogId}}' method="POST">
+    <label for="name">Enter Dog's Name: </label>
+    <input type="text" name="name" placeholder="Enter Name"
+        value="{{name}}"/><br><br>
+
+    <label for="description">Enter Dog's Description: </label>
+    <input type="text" name="description" placeholder="Enter Description"
+        value="{{description}}" /><br><br>
+
+    <label for="imgUrl">Enter Dog's Image URL: </label>
+    <input type="text" name="imgUrl" placeholder="Enter Url"
+        value="{{imgUrl}}" /><br><br>
+
+    <button type="submit">Edit Dog</button>
+</form><br>
+
+<form action="/dogs/delete/{{dogId}}" method="POST">
+    <button type="submit">Delete Dog</button>
+</form><br>
+<a href="/dogs">
+    <button type="submit">Back</button>
+</a>
+
+{{/with}}
+
+
+
+
+

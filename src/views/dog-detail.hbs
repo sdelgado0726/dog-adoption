@@ -1,0 +1,26 @@
+{{#with foundDog}}
+
+    <img src={{imgUrl}} alt="" width="375" height="300">
+    <h2>{{name}}</h2>
+    <p>{{description}}</p><br>
+    
+    <div class="detail">
+        <a href="/dogs">
+            <button type="submit">Back</button>
+        </a>
+    </div>
+    <div class="detail">
+        <form action="/dogs/edit/{{dogId}}" method="GET">
+            <button type="submit">Edit Dog</button>
+        </form>
+    </div>
+{{/with}}
+
+
+
+
+
+
+
+
+

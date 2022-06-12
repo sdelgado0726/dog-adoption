@@ -1,0 +1,20 @@
+<h1 class="adoption">Dog Adoption</h1>
+
+{{#each dogList}}
+    <div>
+        <img src={{imgUrl}} alt="" width="300" height="250">
+    </div>
+    <div>
+        <h3>{{name}}</h3>
+        <a href="/dogs/{{dogId}}">View Dog</a><br>
+        <a href="/dogs/edit/{{dogId}}">Edit Dog</a><br><br>
+        <form action="/dogs/delete/{{dogId}}" method="POST">
+            <button type="submit">Delete Dog</button>
+        </form><br> 
+    </div>
+{{/each}}<br><br><br>
+
+<a href="/dogs/add" class="adoption">
+    <button type="submit">Add New Dog</button>
+</a>
+
